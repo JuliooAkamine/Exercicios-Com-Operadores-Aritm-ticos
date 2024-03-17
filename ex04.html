@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: poppins, sans-serif;
+    }
+    body{
+      background-image: url(img/pexels-pixabay-531880.jpg);
+    }
+
+    #formularionota {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #menuburguer {
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(190, 188, 188);
+      width: 300px;
+      height: 243px;
+      position: absolute;
+      z-index: 1000;
+      display: none;
+    }
+
+    #menuburguer>a {
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+      text-align: center;
+      margin: 10px;
+
+      transition: 300mss;
+      height: 100%;
+    }
+
+    #menuburguer>a:hover {
+      background-color: rgb(73, 73, 73);
+
+      transition: 300ms;
+    }
+
+    #menu {
+      display: block;
+      height: 50px;
+      cursor: pointer;
+      background-color: rgb(190, 188, 188);
+    }
+
+    .icon {
+      width: 50px;
+    }
+
+    #close {
+      display: none;
+      z-index: 1000;
+      cursor: pointer;
+    }
+
+    #icones {
+      width: 300px;
+    }
+
+    .materias {
+      display: block;
+    }
+
+    #formularionota {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      height: 90vh;
+
+      color: white;
+      text-align: center;
+      margin: 0 auto;
+      justify-content: center;
+    }
+
+    #formulario-container {
+      width: 60%;
+      background-color: darkslategray;
+      padding: 20px;
+      color: white;
+    }
+
+    #enviar{
+      width: 85%;
+      margin-top: 10px;
+      font-size: 1.5em;
+      text-transform: uppercase;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    #nota1, #nota2, #nota3, #nota4, #nota5, #nota6{
+      width: 85%;
+      height: 30px;
+      
+      
+    }
+    
+    #containermedia{
+
+      display: flex;
+    justify-content: center;
+    height: 90vh;
+    align-items: center;
+}
+    
+#notamedia{
+  background-color: darkslategray;
+    font-size: 1.5em;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+}
+   input{text-align: center;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div id="icones">
+    <img onclick="clickMenu()" id="menu" class="icon" src="img/menu_FILL0_wght400_GRAD0_opsz24.svg"
+      alt="icon-burguer" />
+    <img onclick="clickClose()" id="close" class="icon" src="img/close_FILL0_wght400_GRAD0_opsz24.svg"
+      alt="icon-close" />
+  </div>
+  <div id="menuburguer">
+    <a href="index.html">Exercicio 01</a>
+    <a href="ex02js.html">Exercicio 02</a>
+    <a href="ex03js.html">Exercicio 03</a>
+    <a href="ex04.html">Exercicio 04</a>
+  </div>
+
+  <form action="#" id="formularionota">
+    <div id="formulario-container">
+      <h1>Nota Media</h1>
+      <div>
+        <label class="materias" for="#">Matematica</label>
+        <input required type="number" id="nota1"  />
+      </div>
+
+      <div>
+        <label class="materias" for="#">Portugues</label>
+        <input required type="number" id="nota2" />
+      </div>
+      <div>
+        <label class="materias" for="#">Geografia</label>
+        <input required type="number" id="nota3" />
+      </div>
+      <div>
+        <label class="materias" for="#">Artes</label>
+        <input required type="number" id="nota4" />
+      </div>
+      <div>
+        <label class="materias" for="#">Educação Fisica</label>
+        <input required type="number" id="nota5" />
+      </div>
+      <div>
+        <label class="materias" for="#">Física</label>
+        <input required type="number" id="nota6" />
+      </div>
+      <input type="submit" value="enviar" id="enviar" />
+    </div>
+  </form>
+
+  <div id="containermedia">
+    <h1 id="notamedia"></h1>
+  </div>
+
+  <script src="js/ex04.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: poppins, sans-serif;
+      }
+      body {
+        height: 100vh;
+        background-image: url(img/pexels-pixabay-531880.jpg);
+      }
+      #formpagamentos {
+        display: none;
+        flex-direction: column;
+        background-color: darkslategray;
+  
+    margin: 0 auto;
+    width: 60%;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+      }
+
+      #formulario {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+       
+        margin: 0 auto;
+        text-align: center;
+        justify-content: center;
+
+         display: flex;
+        
+       
+        background-color: rgba(66, 66, 66, 0.73);
+        height: 300px;
+        width: 300px;
+        padding: 20px;
+        border-radius: 30px 0px 30px 0px;
+        margin: 0 auto;
+        
+      }
+
+      #menuburguer {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(190, 188, 188);
+        width: 300px;
+        height: 243px;
+        position: absolute;
+        z-index: 1000;
+        display: none;
+      }
+
+      #menuburguer > a {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+        text-align: center;
+        margin: 10px;
+
+        transition: 300mss;
+        height: 100%;
+      }
+
+      #menuburguer > a:hover {
+        background-color: rgb(73, 73, 73);
+
+        transition: 300ms;
+      }
+      #menu {
+        display: block;
+        height: 50px;
+        cursor: pointer;
+        background-color: rgb(190, 188, 188);
+      }
+
+      .icon {
+        width: 50px;
+      }
+      #close {
+        display: none;
+        z-index: 1000;
+        cursor: pointer;
+      }
+      #icones {
+        width: 300px;
+      }
+      
+      #background{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+       
+        
+      }
+      input{
+        text-align: center;
+      }
+
+      label{
+        color: white;
+        margin-bottom: 10px;
+      }
+      input{
+        height: 30px;
+        margin: 5px;
+      }
+      h1{    text-align: center;
+    font-size: 1.4em;
+    margin-bottom: 10px;}
+    </style>
+  </head>
+  <body>
+    <div id="icones">
+      <img
+        onclick="clickMenu()"
+        id="menu"
+        class="icon"
+        src="img/menu_FILL0_wght400_GRAD0_opsz24.svg"
+        alt="icon-burguer"
+      />
+      <img
+        onclick="clickClose()"
+        id="close"
+        class="icon"
+        src="img/close_FILL0_wght400_GRAD0_opsz24.svg"
+        alt="icon-close"
+      />
+    </div>
+    <div id="menuburguer">
+      <a href="index.html">Exercicio 01</a>
+      <a href="ex02js.html">Exercicio 02</a>
+      <a href="ex03js.html">Exercicio 03</a>
+      <a href="ex04.html">Exercicio 04</a>
+    </div>
+
+    <div id="background">
+      <form action="#" id="formulario">
+        <label for="#">Qual o valor do seu produto?</label>
+        <input type="number" id="valor" required />
+        <input type="submit" name="enviar" id="enviar" />
+      </form>
+    </div>
+    <form action="#" id="formpagamentos">
+      <h1>Formas de Pagamentos</h1>
+      <div>
+        <input  type="radio" id="cartao" />
+        <label for="#">Cartão de credito</label>
+      </div>
+
+      <div>
+        <input type="radio" id="pix" />
+        <label for="#">Pix</label>
+      </div>
+
+      <div>
+        <input type="radio" id="cartao de debito" />
+        <label for="#">Cartão de debito</label>
+      </div>
+
+      <div>
+        <input type="radio" id="avista" />
+        <label for="#" id="dinheiro"></label>
+      </div>
+
+      <div>
+        <input type="radio" id="parcelado" />
+        <label for="#" id="parcela"></label>
+      </div>
+
+      
+    </form>
+
+    <script src="js/ex03.js"></script>
+  </body>
+</html>
