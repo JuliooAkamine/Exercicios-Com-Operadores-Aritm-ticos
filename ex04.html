@@ -22,54 +22,72 @@
       flex-direction: column;
     }
 
-    #menuburguer {
-      display: flex;
-      flex-direction: column;
-      background-color: rgb(190, 188, 188);
-      width: 300px;
-      height: 243px;
-      position: absolute;
-      z-index: 1000;
-      display: none;
-    }
+    #menuburguer{
+    display: flex;
+    flex-direction: column;
+    background-color: darkslategray;
+    width: 300px;
+    height: 243px;
+    position: absolute;
+    z-index: 1000;
+    display: none;
+       
+  }
 
-    #menuburguer>a {
-      text-decoration: none;
-      color: white;
-      cursor: pointer;
-      text-align: center;
-      margin: 10px;
+  #menuburguer>a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    height: 61px;
+    padding-top: 17px;
+    transition: 300ms;
+  
 
-      transition: 300mss;
-      height: 100%;
-    }
+    
+  }
 
-    #menuburguer>a:hover {
-      background-color: rgb(73, 73, 73);
+  #menuburguer>a:hover{
+    background-color: rgb(37, 37, 37);
+    scale: 1.1;
 
-      transition: 300ms;
-    }
 
-    #menu {
-      display: block;
-      height: 50px;
-      cursor: pointer;
-      background-color: rgb(190, 188, 188);
-    }
+   
+    transition: 300ms;
+  }
+  #menu{
+    display: block;
+    height: 50px;
+    cursor: pointer;
+    background-color: darkslategray;
+    transition: 300ms;
+    
+  }
 
-    .icon {
-      width: 50px;
-    }
+  #menu:hover{
+    scale: 1.2;
+    transition: 300ms;
+  }
+  
+  .icon{
+    width: 50px;
+  }
+  #close{
+    display: none;
+    z-index: 1000;
+    cursor: pointer;
+    transition: 300ms;
 
-    #close {
-      display: none;
-      z-index: 1000;
-      cursor: pointer;
-    }
+  }
 
-    #icones {
-      width: 300px;
-    }
+  #close:hover{
+    scale: 1.2;
+    transition: 300ms;
+  }
+  #icones{
+    width: 300px;
+    
+  }
 
     .materias {
       display: block;
@@ -153,28 +171,28 @@
       <h1>Nota Media</h1>
       <div>
         <label class="materias" for="#">Matematica</label>
-        <input required type="text" id="nota1"  />
+        <input required type="number" step="any" id="nota1"  />
       </div>
 
       <div>
         <label class="materias" for="#">Portugues</label>
-        <input required type="text" id="nota2" />
+        <input required type="number" step="any" id="nota2" />
       </div>
       <div>
         <label class="materias" for="#">Geografia</label>
-        <input required type="text" id="nota3" />
+        <input required type="number" step="any" id="nota3" />
       </div>
       <div>
         <label class="materias" for="#">Artes</label>
-        <input required type="text" id="nota4" />
+        <input required type="number" step="any" id="nota4" />
       </div>
       <div>
         <label class="materias" for="#">Educação Fisica</label>
-        <input required type="text" id="nota5" />
+        <input required type="number" step="any" id="nota5" />
       </div>
       <div>
         <label class="materias" for="#">Física</label>
-        <input required type="text" id="nota6" />
+        <input required type="number" step="any" id="nota6" />
       </div>
       <input type="submit" value="enviar" id="enviar" />
     </div>

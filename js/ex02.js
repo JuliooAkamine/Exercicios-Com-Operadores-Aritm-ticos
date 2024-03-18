@@ -14,7 +14,7 @@ form.addEventListener('submit' , function (event) {
     document.getElementById('background').style.display = 'none'
     document.getElementById('container-texto').style.display = 'flex'
 
-    document.getElementById('texto').innerHTML = 'o valor para cada cliente fica R$'+(valorinteiro / valor)+' '
+    document.getElementById('texto').innerHTML = 'o valor para cada cliente fica R$'+(valorinteiro / valor).toFixed(2)+' '
 
 })
 
@@ -44,7 +44,7 @@ function clickClose() {
     document.getElementById('menuburguer').style.display = 'flex' 
     document.getElementById('close').style.display = 'block'
     document.getElementById('menu').style.display = 'none'
-    document.getElementById('icones').style.backgroundColor = 'rgb(190, 188, 188)'
+    document.getElementById('icones').style.backgroundColor = 'darkslategray'
     
     
   }

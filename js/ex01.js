@@ -17,7 +17,8 @@ function clickMenu() {
   document.getElementById('menuburguer').style.display = 'flex' 
   document.getElementById('close').style.display = 'block'
   document.getElementById('menu').style.display = 'none'
-  document.getElementById('icones').style.backgroundColor = 'rgb(190, 188, 188)'
+  document.getElementById('icones').style.backgroundColor = 'darkslategray'
+ 
   
   
 }

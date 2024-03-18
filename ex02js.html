@@ -17,16 +17,16 @@
 
 
 
-    #menuburguer{
+  #menuburguer{
     display: flex;
     flex-direction: column;
-    background-color: rgb(190, 188, 188);
+    background-color: darkslategray;
     width: 300px;
     height: 243px;
     position: absolute;
     z-index: 1000;
     display: none;
-    
+       
   }
 
   #menuburguer>a{
@@ -34,16 +34,19 @@
     color: white;
     cursor: pointer;
     text-align: center;
-    margin: 10px;
-   
-    transition: 300mss;
-    height: 100%;
+    height: 61px;
+    padding-top: 17px;
+    transition: 300ms;
+  
+
     
   }
 
   #menuburguer>a:hover{
-    background-color: rgb(73, 73, 73);
-  
+    background-color: rgb(37, 37, 37);
+    scale: 1.1;
+
+
    
     transition: 300ms;
   }
@@ -51,7 +54,14 @@
     display: block;
     height: 50px;
     cursor: pointer;
-    background-color: rgb(190, 188, 188);
+    background-color: darkslategray;
+    transition: 300ms;
+    
+  }
+
+  #menu:hover{
+    scale: 1.2;
+    transition: 300ms;
   }
   
   .icon{
@@ -61,14 +71,22 @@
     display: none;
     z-index: 1000;
     cursor: pointer;
+    transition: 300ms;
+
+  }
+
+  #close:hover{
+    scale: 1.2;
+    transition: 300ms;
   }
   #icones{
     width: 300px;
     
   }
+  
 
   #principal{
-    background-color: rgba(66, 66, 66, 0.73);;
+    background-color: darkslategray;
   height: 250px;
   width: 370px;
   display: flex;
@@ -111,6 +129,7 @@
 
   label{
     color: white;
+    font-size:  0.8em;
     
   }
 
@@ -122,6 +141,14 @@
 
   }
 
+  @media screen and (min-width:768px) {
+    #principal{
+      width: 520px;
+    }
+    label{
+      font-size: 1.1em;
+    }
+  }
     </style>
     
 </head>
@@ -143,7 +170,7 @@
      <div id="principal">
          <form action="#" id="formulario">
              <label for="#">Qual o valor total da sua conta?</label>
-             <input type="text" name="valortotal" id="valortotal" >
+             <input type="number" step="any" name="valortotal" id="valortotal" >
      
          </form>
          <form action="#" id="form">
